@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import "./App.css";
 import { useState } from "react";
 
@@ -58,19 +57,6 @@ function App() {
         <button onClick={() => {setTotal(total + 7); }}>7</button><button onClick={() => {setTotal(total + 8);}}>8</button>
         <button onClick={() => {setTotal(total + 9);}}>9</button> */}
         {/* <button onClick={() => {setTotal(total + 0);}} >0</button> */}
-
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        > */}
-        {/* Learn React
-        </a> */}
       </header>
     </div>
   );
