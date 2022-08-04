@@ -2,25 +2,50 @@
 import "./App.css";
 import { useState } from "react";
 
+// const styles = {
+//   title: {
+//     fontSize: 36,
+//     fontWeight: '900',
+//     color: 'yellow'
+//   },
+//   screen: {
+//     backgroundColor: 'black',
+//     padding: 16,
+//   }
+// }
+
+
 function App() {
   const [total, setTotal] = useState(0);
 
-  let digits = [1,2,3,4,5,6,7,8,9,0]
+  let digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   return (
     <div className="App">
       <header className="App-header">
         <div>Total: {total} </div>
+        <div id="calculator">
+          {digits.map((digit) => {
+            return (
+              <button
+                key={digit}
+                onClick={() => {
+                  setTotal(total + digit);
+                }}
+              >
+                {digit}
+              </button>
+            );
+          })}
 
-    {digits.map((digit) => {
-      return <button key={digit} onClick={()=>{
-        setTotal(total + digit)
-      }}>{digit}</button>
-    })}
-    
-    <button onClick={()=> {setTotal(total * 0);}}>reset</button>
-    
-
+          <button style={{color: "black", backgroundColor: "darksalmon"}}
+            onClick={() => {
+              setTotal(total * 0);
+            }}
+          >
+            reset
+          </button>
+        </div>
 
         {/* <button>+</button> */}
 
@@ -33,10 +58,6 @@ function App() {
         <button onClick={() => {setTotal(total + 7); }}>7</button><button onClick={() => {setTotal(total + 8);}}>8</button>
         <button onClick={() => {setTotal(total + 9);}}>9</button> */}
         {/* <button onClick={() => {setTotal(total + 0);}} >0</button> */}
-
-
-
-
 
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>
